@@ -1,8 +1,8 @@
 require 'delayed_job'
 require 'rspec'
 
-require_relative 'delayed/extensions/rspec/version'
-require_relative 'delayed/backend/base'
+require 'delayed/extensions/rspec/version'
+require 'delayed/extensions/rspec/job'
 
 RSpec.configure do |config|
   config.before do

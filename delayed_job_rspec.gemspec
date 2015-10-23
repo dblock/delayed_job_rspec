@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.licenses = ['MIT']
   s.summary = 'Patches Delayed::Job to run jobs immediately under RSpec.'
   s.add_dependency 'delayed_job'
+  s.add_dependency 'rspec'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
   s.add_development_dependency 'rubocop', '0.34.1'
 end

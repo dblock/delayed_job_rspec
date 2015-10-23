@@ -1,12 +1,12 @@
-Delayed::Job::Rspec
-=================
+Delayed::Job::RSpec
+===================
 
 [![Gem Version](https://badge.fury.io/rb/delayed_job_rspec.svg)](http://badge.fury.io/rb/delayed_job_rspec)
 [![Build Status](https://travis-ci.org/dblock/delayed_job_rspec.svg?branch=master)](https://travis-ci.org/dblock/delayed_job_rspec)
 
 Many applications rely on asynchronous behavior of delayed jobs. But having to explicitly invoke `Delayed::Worker.new.work_off` in RSpec tests is tedious. Furthermore jobs fail silently, having to constantly examine delayed jobs for error is annoying.
 
-This gem patches Delayed::Job to run jobs immediately under RSpec and warns about failing ones. You can now create expectations from side effects of delayed jobs.
+This gem patches `Delayed::Job` to run jobs immediately under RSpec and warns about failing ones. You can now create expectations from side effects of delayed jobs.
 
 ## Installation
 
