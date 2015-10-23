@@ -1,0 +1,9 @@
+rvm:
+  - 2.2
+  - 2.1
+  - 2.0.0
+  - rbx-2.5.7
+  - jruby-19mode
+  - ruby-head
+  - jruby-head
+
