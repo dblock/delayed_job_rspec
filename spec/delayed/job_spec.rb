@@ -11,9 +11,17 @@ describe Delayed::Job do
       expect_any_instance_of(Dummy).to receive(:do!).once
       Dummy.new.delay.do!
     end
-    it 'warns' do
+    it 'silence_errors' do
+      subject.class.silence_errors!
       expect_any_instance_of(Dummy).to receive(:do!) { fail 'foobar!' }
       expect(subject.class).to receive(:warn).with(/\[WARNING\] Dummy#do! - foobar!/)
+      Dummy.new.delay.do!
+    end
+    it 'silence_errors and silence_warnings' do
+      subject.class.silence_errors!
+      subject.class.silence_warnings!
+      expect_any_instance_of(Dummy).to receive(:do!) { fail 'foobar!' }
+      expect(subject.class).to_not receive(:warn).with(/\[WARNING\] Dummy#do! - foobar!/)
       Dummy.new.delay.do!
     end
   end

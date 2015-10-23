@@ -11,6 +11,16 @@ module Delayed
         self.execute_synchronously = false
       end
 
+      attr_accessor :silence_errors
+
+      def silence_errors?
+        !!silence_errors
+      end
+
+      def silence_errors!
+        self.silence_errors = true
+      end
+
       attr_accessor :silence_warnings
 
       def silence_warnings?
@@ -48,14 +58,18 @@ module Delayed
               begin
                 job.invoke_job
               rescue Exception => e
-                bt = e.backtrace.join("\n  ")
-                warn "[WARNING] #{job.name} - #{e}\n  #{bt}" unless silence_warnings?
                 job.attempts = 1
                 job.locked_at = nil
                 job.locked_by = nil
                 job.last_error = e.message
                 job.failed_at = Time.now.utc
                 job.save
+                if !silence_errors?
+                  raise e
+                elsif !silence_warnings?
+                  bt = e.backtrace.join("\n  ")
+                  warn "[WARNING] #{job.name} - #{e}\n  #{bt}" unless silence_warnings?
+                end
               end
             end
           end

@@ -30,7 +30,17 @@ Behavior changes are reset before each spec - the following options will only af
 Delayed::Job.execute_asynchronously!
 ```
 
+### Silence Failure Errors
+
+Instead of an error, show a warning.
+
+```ruby
+Delayed::Job.silence_errors!
+```
+
 ### Silence Failure Warnings
+
+Ignore all errors, don't warn.
 
 ```ruby
 Delayed::Job.silence_warnings!
