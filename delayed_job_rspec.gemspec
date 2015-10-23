@@ -1,9 +1,9 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'delayed_job/rspec/version'
+require 'delayed/extensions/rspec/version'
 
 Gem::Specification.new do |s|
-  s.name = 'delayed_job-rspec'
-  s.version = DelayedJob::RSpec::VERSION
+  s.name = 'delayed_job_rspec'
+  s.version = Delayed::Extensions::RSpec::VERSION
   s.authors = ['Daniel Doubrovkine']
   s.email = 'dblock@dblock.org'
   s.platform = Gem::Platform::RUBY
@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- spec/*`.split("\n")
   s.require_paths = ['lib']
-  s.homepage = 'http://github.com/dblock/delayed_job-rspec'
+  s.homepage = 'http://github.com/dblock/delayed_job_rspec'
   s.licenses = ['MIT']
-  s.summary = 'Run delayed jobs synchronously under RSpec.'
+  s.summary = 'Patches Delayed::Job to run jobs immediately under RSpec.'
   s.add_dependency 'delayed_job'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'

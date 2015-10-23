@@ -1,6 +1,6 @@
-# Releasing DelayedJob::RSpec
+# Releasing Delayed::Job::RSpec
 
-There're no hard rules about when to release delayed_job-rspec. Release bug fixes frequenty, features not so frequently and breaking API changes rarely.
+There're no hard rules about when to release delayed_job_rspec. Release bug fixes frequenty, features not so frequently and breaking API changes rarely.
 
 ### Release
 
@@ -11,7 +11,7 @@ bundle install
 rake
 ```
 
-Check that the last build succeeded in [Travis CI](https://travis-ci.org/dblock/delayed_job-rspec) for all supported platforms.
+Check that the last build succeeded in [Travis CI](https://travis-ci.org/dblock/delayed_job_rspec) for all supported platforms.
 
 Increment the version, modify [lib/delayed_job/rspec/version.rb](lib/delayed_job/rspec/version.rb).
 
@@ -39,10 +39,10 @@ Release.
 ```
 $ rake release
 
-delayed_job-rspec 0.2.2 built to pkg/delayed_job-rspec-0.2.2.gem.
+delayed_job_rspec 0.2.2 built to pkg/delayed_job_rspec-0.2.2.gem.
 Tagged v0.2.2.
 Pushed git commits and tags.
-Pushed delayed_job-rspec 0.2.2 to rubygems.org.
+Pushed delayed_job_rspec 0.2.2 to rubygems.org.
 ```
 
 ### Prepare for the Next Version

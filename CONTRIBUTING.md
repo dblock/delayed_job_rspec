@@ -1,19 +1,19 @@
-# Contributing to DelayedJob::RSpec
+# Contributing to Delayed::Job::RSpec
 
-This project is work of [many contributors](https://github.com/dblock/delayed_job-rspec/graphs/contributors).
+This project is work of [many contributors](https://github.com/dblock/delayed_job_rspec/graphs/contributors).
 
-You're encouraged to submit [pull requests](https://github.com/dblock/delayed_job-rspec/pulls), [propose features and discuss issues](https://github.com/dblock/delayed_job-rspec/issues).
+You're encouraged to submit [pull requests](https://github.com/dblock/delayed_job_rspec/pulls), [propose features and discuss issues](https://github.com/dblock/delayed_job_rspec/issues).
 
 In the examples below, substitute your Github username for `contributor` in URLs.
 
 ### Fork the Project
 
-Fork the [project on Github](https://github.com/dblock/delayed_job-rspec) and check out your copy.
+Fork the [project on Github](https://github.com/dblock/delayed_job_rspec) and check out your copy.
 
 ```
-git clone https://github.com/contributor/delayed_job-rspec.git
-cd delayed_job-rspec
-git remote add upstream https://github.com/dblock/delayed_job-rspec.git
+git clone https://github.com/contributor/delayed_job_rspec.git
+cd delayed_job_rspec
+git remote add upstream https://github.com/dblock/delayed_job_rspec.git
 ```
 
 ### Bundle Install and Test
@@ -85,14 +85,14 @@ git push origin my-feature-branch
 
 ### Make a Pull Request
 
-Go to https://github.com/contributor/delayed_job-rspec and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
+Go to https://github.com/contributor/delayed_job_rspec and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
 
 ### Update CHANGELOG Again
 
 Update the [CHANGELOG](CHANGELOG.md) with the pull request number. A typical entry looks as follows.
 
 ```
-* [#123](https://github.com/dblock/delayed_job-rspec/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
+* [#123](https://github.com/dblock/delayed_job_rspec/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
 ```
 
 Amend your previous commit and force push the changes.
